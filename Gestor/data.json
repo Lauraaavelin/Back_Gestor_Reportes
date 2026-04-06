@@ -1,0 +1,23 @@
+[
+  {
+    "code": "ABC123",
+    "fecha": "2026-04-01",
+    "cost": 1200,
+    "time_used": 40,
+    "usage": { "cpu": 70, "storage": 40, "network": 80 }
+  },
+  {
+    "code": "ABC123",
+    "fecha": "2026-04-05",
+    "cost": 1500,
+    "time_used": 50,
+    "usage": { "cpu": 60, "storage": 50, "network": 90 }
+  },
+  {
+    "code": "XYZ999",
+    "fecha": "2026-04-03",
+    "cost": 800,
+    "time_used": 30,
+    "usage": { "cpu": 50, "storage": 30, "network": 60 }
+  }
+]
