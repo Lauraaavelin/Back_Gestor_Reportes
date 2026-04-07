@@ -33,10 +33,37 @@ def report_view(request):
         filtered.append(item)
 
     #  TODO: aquí van los cálculos del reporte
+    cantidad = len(filtered)
+    prom_costo=0
+    prom_uso=0
+    prom_datos=[cpu=0,storage=50, network=90]
+    for i in filtered:
+        for j in i:
+            if j=="costo":
+                prom_costo+=j["costo"]
+            if j=="uso":
+                prom_uso+=j["uso"]
+            if j=="datos":
+                prom_datos[0]+=j["datos"]["cpu"]
+                prom_datos[1]+=j["datos"]["storage"]
+                prom_datos[2]+=j["datos"]["network"]
+
+    prom_costo= prom_costo/cantidad
+    prom_uso= prom_uso/cantidad
+    prom_datos[0]= prom_datos[0]/cantidad
+    prom_datos[1]= prom_datos[1]/cantidad
+    prom_datos[2]= prom_datos[2]/cantidad    
+
     report = {
-        "code": code,
-        "message": "TODO: calcular métricas",
-        "items": len(filtered)
+        "Code": code,
+        "Costo promedio": prom_costo,
+        "Uso promedio": prom_uso,
+        "Datos promedio": {
+            "cpu": prom_datos[0],
+            "storage": prom_datos[1],
+            "network": prom_datos[2]
+        },
+        "Cantidad de items": len(filtered)
     }
 
     return JsonResponse({
