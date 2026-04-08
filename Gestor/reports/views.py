@@ -36,7 +36,7 @@ def report_view(request):
     cantidad = len(filtered)
     prom_costo=0
     prom_uso=0
-    prom_datos=[cpu=0,storage=50, network=90]
+    prom_datos=[0, 0, 0]
     for i in filtered:
         for j in i:
             if j=="costo":
