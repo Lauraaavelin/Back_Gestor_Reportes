@@ -8,16 +8,174 @@
   },
   {
     "code": "ABC123",
-    "fecha": "2026-04-05",
+    "fecha": "2026-04-04",
+    "cost": 1350,
+    "time_used": 44,
+    "usage": { "cpu": 68, "storage": 42, "network": 76 }
+  },
+  {
+    "code": "ABC123",
+    "fecha": "2026-04-07",
+    "cost": 1420,
+    "time_used": 48,
+    "usage": { "cpu": 65, "storage": 47, "network": 82 }
+  },
+  {
+    "code": "ABC123",
+    "fecha": "2026-04-10",
     "cost": 1500,
     "time_used": 50,
     "usage": { "cpu": 60, "storage": 50, "network": 90 }
   },
   {
+    "code": "ABC123",
+    "fecha": "2026-04-13",
+    "cost": 1580,
+    "time_used": 53,
+    "usage": { "cpu": 63, "storage": 54, "network": 88 }
+  },
+
+  {
     "code": "XYZ999",
-    "fecha": "2026-04-03",
+    "fecha": "2026-04-02",
     "cost": 800,
     "time_used": 30,
     "usage": { "cpu": 50, "storage": 30, "network": 60 }
+  },
+  {
+    "code": "XYZ999",
+    "fecha": "2026-04-05",
+    "cost": 860,
+    "time_used": 33,
+    "usage": { "cpu": 52, "storage": 34, "network": 62 }
+  },
+  {
+    "code": "XYZ999",
+    "fecha": "2026-04-08",
+    "cost": 910,
+    "time_used": 35,
+    "usage": { "cpu": 55, "storage": 36, "network": 64 }
+  },
+  {
+    "code": "XYZ999",
+    "fecha": "2026-04-11",
+    "cost": 980,
+    "time_used": 37,
+    "usage": { "cpu": 57, "storage": 39, "network": 68 }
+  },
+  {
+    "code": "XYZ999",
+    "fecha": "2026-04-14",
+    "cost": 1040,
+    "time_used": 40,
+    "usage": { "cpu": 59, "storage": 41, "network": 70 }
+  },
+
+  {
+    "code": "TEST001",
+    "fecha": "2026-04-01",
+    "cost": 640,
+    "time_used": 22,
+    "usage": { "cpu": 35, "storage": 20, "network": 45 }
+  },
+  {
+    "code": "TEST001",
+    "fecha": "2026-04-03",
+    "cost": 690,
+    "time_used": 24,
+    "usage": { "cpu": 38, "storage": 22, "network": 47 }
+  },
+  {
+    "code": "TEST001",
+    "fecha": "2026-04-06",
+    "cost": 710,
+    "time_used": 26,
+    "usage": { "cpu": 40, "storage": 25, "network": 50 }
+  },
+  {
+    "code": "TEST001",
+    "fecha": "2026-04-09",
+    "cost": 760,
+    "time_used": 27,
+    "usage": { "cpu": 42, "storage": 27, "network": 52 }
+  },
+  {
+    "code": "TEST001",
+    "fecha": "2026-04-12",
+    "cost": 820,
+    "time_used": 29,
+    "usage": { "cpu": 45, "storage": 29, "network": 55 }
+  },
+
+  {
+    "code": "LOAD777",
+    "fecha": "2026-04-02",
+    "cost": 1800,
+    "time_used": 62,
+    "usage": { "cpu": 82, "storage": 60, "network": 92 }
+  },
+  {
+    "code": "LOAD777",
+    "fecha": "2026-04-05",
+    "cost": 1920,
+    "time_used": 66,
+    "usage": { "cpu": 84, "storage": 63, "network": 94 }
+  },
+  {
+    "code": "LOAD777",
+    "fecha": "2026-04-08",
+    "cost": 2050,
+    "time_used": 69,
+    "usage": { "cpu": 86, "storage": 65, "network": 95 }
+  },
+  {
+    "code": "LOAD777",
+    "fecha": "2026-04-11",
+    "cost": 2140,
+    "time_used": 71,
+    "usage": { "cpu": 88, "storage": 67, "network": 96 }
+  },
+  {
+    "code": "LOAD777",
+    "fecha": "2026-04-14",
+    "cost": 2260,
+    "time_used": 74,
+    "usage": { "cpu": 90, "storage": 70, "network": 98 }
+  },
+
+  {
+    "code": "USER555",
+    "fecha": "2026-04-01",
+    "cost": 980,
+    "time_used": 36,
+    "usage": { "cpu": 58, "storage": 33, "network": 65 }
+  },
+  {
+    "code": "USER555",
+    "fecha": "2026-04-04",
+    "cost": 1020,
+    "time_used": 38,
+    "usage": { "cpu": 60, "storage": 35, "network": 67 }
+  },
+  {
+    "code": "USER555",
+    "fecha": "2026-04-07",
+    "cost": 1080,
+    "time_used": 40,
+    "usage": { "cpu": 61, "storage": 37, "network": 69 }
+  },
+  {
+    "code": "USER555",
+    "fecha": "2026-04-10",
+    "cost": 1140,
+    "time_used": 43,
+    "usage": { "cpu": 64, "storage": 39, "network": 72 }
+  },
+  {
+    "code": "USER555",
+    "fecha": "2026-04-13",
+    "cost": 1210,
+    "time_used": 45,
+    "usage": { "cpu": 66, "storage": 41, "network": 74 }
   }
 ]
