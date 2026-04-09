@@ -1,0 +1,16 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+
+# Django local DB and logs
+*.sqlite3
+*.log
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/

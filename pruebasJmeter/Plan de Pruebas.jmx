@@ -12,6 +12,8 @@
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Grupo de Hilos">
         <intProp name="ThreadGroup.num_threads">5000</intProp>
         <intProp name="ThreadGroup.ramp_time">60</intProp>
+        <intProp name="ThreadGroup.num_threads">5000</intProp>
+        <intProp name="ThreadGroup.ramp_time">60</intProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Controlador Bucle">
@@ -45,7 +47,7 @@
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Configuración del CSV Data Set">
             <stringProp name="delimiter">,</stringProp>
             <stringProp name="fileEncoding"></stringProp>
-            <stringProp name="filename">C:/Users/lauri/OneDrive/Documentos/5toSemestre/Arquisoft/Back_Gestor_Reportes/pruebasJmeter/codes.csv</stringProp>
+            <stringProp name="filename">C:/Users/sebas/OneDrive/Documents/Universidad/Arquisoft/Back_Gestor_Reportes/pruebasJmeter/codes.csv</stringProp>
             <boolProp name="ignoreFirstLine">false</boolProp>
             <boolProp name="quotedData">false</boolProp>
             <boolProp name="recycle">true</boolProp>
