@@ -27,13 +27,18 @@ class SecurityExperimentMiddleware:
         
         return response
 
-    def notificar_admin(self):
-        # Para el experimento inicial, usamos la consola de Django 
-        # para no pelear con SMTP antes de tiempo
-        send_mail(
-            'ALERTA SEGURIDAD BITE.CO',
-            'Acceso no autorizado detectado.',
-            'sistema@bite.co',
-            ['admin@bite.co'],
-            fail_silently=False,
+import boto3
+
+def notificar_admin(self):
+    # Usamos Boto3 que habla con AWS por el puerto 443 (HTTPS), 
+    # el cual SIEMPRE está abierto en AWS.
+    try:
+        sns = boto3.client('sns', region_name='us-east-1')
+        sns.publish(
+            TopicArn='tu:arn:de:sns:aquí', # Copia el ARN de tu consola
+            Message="Alerta de Seguridad: Acceso no autorizado detectado en Bite.co",
+            Subject="Urgente: Brecha de Seguridad"
         )
+        print("Alerta enviada vía Amazon SNS")
+    except Exception as e:
+        print(f"Error enviando SNS: {e}")
