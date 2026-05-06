@@ -3,6 +3,8 @@ import logging
 from django.core.mail import send_mail
 from django.conf import settings
 
+import boto3 
+
 logger = logging.getLogger('security')
 
 class SecurityExperimentMiddleware:
@@ -27,18 +29,17 @@ class SecurityExperimentMiddleware:
         
         return response
 
-import boto3
 
-def notificar_admin(self):
-    # Usamos Boto3 que habla con AWS por el puerto 443 (HTTPS), 
-    # el cual SIEMPRE está abierto en AWS.
-    try:
-        sns = boto3.client('sns', region_name='us-east-1')
-        sns.publish(
-            TopicArn='tu:arn:de:sns:aquí', # Copia el ARN de tu consola
-            Message="Alerta de Seguridad: Acceso no autorizado detectado en Bite.co",
-            Subject="Urgente: Brecha de Seguridad"
-        )
-        print("Alerta enviada vía Amazon SNS")
-    except Exception as e:
-        print(f"Error enviando SNS: {e}")
+    def notificar_admin(self):
+        # Usamos Boto3 que habla con AWS por el puerto 443 (HTTPS), 
+        # el cual SIEMPRE está abierto en AWS.
+        try:
+            sns = boto3.client('sns', region_name='us-east-1')
+            sns.publish(
+                TopicArn='tu:arn:de:sns:aquí', # Copia el ARN de tu consola
+                Message="Alerta de Seguridad: Acceso no autorizado detectado en Bite.co",
+                Subject="Urgente: Brecha de Seguridad"
+            )
+            print("Alerta enviada vía Amazon SNS")
+        except Exception as e:
+            print(f"Error enviando SNS: {e}")
