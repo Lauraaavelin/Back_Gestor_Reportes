@@ -36,7 +36,7 @@ class SecurityExperimentMiddleware:
         try:
             sns = boto3.client('sns', region_name='us-east-1')
             sns.publish(
-                TopicArn='tu:arn:de:sns:aquí', # Copia el ARN de tu consola
+                TopicArn='arn:aws:sns:us-east-1:716173486387:AlertaSeguridadBite', 
                 Message="Alerta de Seguridad: Acceso no autorizado detectado en Bite.co",
                 Subject="Urgente: Brecha de Seguridad"
             )
