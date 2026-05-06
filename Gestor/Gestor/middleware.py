@@ -10,23 +10,22 @@ class SecurityExperimentMiddleware:
         self.get_response = get_response
 
     def __call__(self, request):
-        # 1. Definimos el objetivo del ataque
+        # 1. PASO DE DETECCIÓN (Antes de la vista)
         if '/ataque/configuracion-sensible/' in request.path:
-            # Iniciamos cronómetro
-            start_time = time.perf_counter()
-            
-            # 2. Simulamos la falta de Auth0 (verificamos si NO está autenticado)
             if not request.user.is_authenticated:
-                # 3. LOGGING INMEDIATO (Para auditoría)
-                logger.warning(f"ANOMALÍA: Intento de acceso en {request.path} | Usuario: Anónimo")
+                start_time = time.perf_counter()
                 
-                # 4. DISPARAR ALERTA (Aquí es donde mides los < 5s)
+                # Ejecutamos la alerta SIN detener la petición
                 self.notificar_admin()
                 
                 end_time = time.perf_counter()
-                print(f"--- TIEMPO DE DETECCIÓN: {end_time - start_time:0.5f} segundos ---")
+                print(f"--- EVENTO DETECTADO EN: {end_time - start_time:0.5f}s ---")
 
-        return self.get_response(request)
+        # 2. CONTINUIDAD (Esto asegura que NO sea prevención)
+        # Dejamos que la petición siga su curso hacia la URL/Vista
+        response = self.get_response(request)
+        
+        return response
 
     def notificar_admin(self):
         # Para el experimento inicial, usamos la consola de Django 
